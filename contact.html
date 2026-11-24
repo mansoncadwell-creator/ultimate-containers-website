@@ -1,0 +1,322 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us & Request a Quote | Ultimate Containers Inc.</title>
+  <meta name="description" content="Request a quotation for shipping containers or contact Ultimate Containers Inc. Provide your requirements and our team will respond with availability and options.">
+  <link rel="canonical" href="https://YOUR-DOMAIN.example/contact.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="theme-color" content="#0b1f3a">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Ultimate Containers Inc.">
+  <meta property="og:title" content="Contact Us & Request a Quote | Ultimate Containers Inc.">
+  <meta property="og:description" content="Request a quotation for shipping containers or contact Ultimate Containers Inc. Provide your requirements and our team will respond with availability and options.">
+  <meta property="og:url" content="https://YOUR-DOMAIN.example/contact.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:image" content="https://YOUR-DOMAIN.example/assets/images/hero/hero-containers-port.jpg">
+  <meta name="twitter:image" content="https://YOUR-DOMAIN.example/assets/images/hero/hero-containers-port.jpg">
+  <meta name="twitter:title" content="Contact Us &amp; Request a Quote | Ultimate Containers Inc.">
+  <meta name="twitter:description" content="Request a quotation for shipping containers or contact Ultimate Containers Inc. Provide your requirements and our team will respond with availability and options.">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <div class="logo-icon"><img src="assets/images/brand/ultimate-containers-logo-wide.jpg" width="1465" height="855" alt="Ultimate Containers Inc. logo"></div>
+        <div class="logo-text">
+          <span class="company-name">Ultimate Containers Inc.</span>
+          <span class="tagline">Shipping Container Solutions</span>
+        </div>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-navigation">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+      <nav class="main-nav" id="main-navigation" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="containers.html">Our Containers</a>
+        <a href="how-we-work.html">How We Work</a>
+        <a href="why-choose-us.html">Why Choose Us</a>
+        <a href="faq.html">FAQ</a>
+        <a href="reviews.html">Customer Reviews</a>
+        <a href="contact.html" class="nav-cta active">Request a Quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+<section class="page-hero">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p>Request a quotation or get in touch with our team. We respond to genuine container enquiries.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <h3>Get in Touch</h3>
+          <p class="configuration-note">Our sales team can help confirm current container availability, pricing and delivery arrangements.</p>
+
+          <div class="contact-detail">
+            <div class="icon">✉</div>
+            <div>
+              <strong>Email</strong>
+              <span><a href="mailto:ultimatecontainersinc@gmail.com">ultimatecontainersinc@gmail.com</a></span>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="icon">☎</div>
+            <div>
+              <strong>Telephone</strong>
+              <span><a href="tel:+13262020106">+1 326-202-0106</a></span>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="icon">💬</div>
+            <div>
+              <strong>WhatsApp</strong>
+              <span><a href="https://wa.me/19715205164">+1 971-520-5164</a></span>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="icon">📍</div>
+            <div>
+              <strong>Offices</strong>
+              <span>Facilities in the United States and Canada. Message our sales team for the correct location for your order.</span>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="icon">🕒</div>
+            <div>
+              <strong>Business Hours</strong>
+              <span>Monday–Friday: 8:00 AM–6:00 PM<br>Saturday–Sunday: 9:00 AM–5:00 PM (Eastern Time)</span>
+            </div>
+          </div>
+        </div>
+
+        <p><a class="btn btn-primary" href="https://wa.me/19715205164" target="_blank" rel="noopener noreferrer">Message on WhatsApp</a> <a class="btn btn-outline" href="tel:+13262020106">Call Us</a></p>
+
+        <!-- Form -->
+        <div class="form-card">
+          <h3 style="margin-bottom: 0.5rem;">Quotation Enquiry Form</h3>
+          <p style="color: var(--grey-600); font-size: 0.95rem; margin-bottom: 1.5rem;">Please provide as much detail as possible so we can respond accurately.</p>
+
+          <div id="form-message" class="form-message" role="status" aria-live="polite" tabindex="-1"></div>
+
+          <form id="quote-form" action="/api/quotations" method="POST" aria-label="Request a shipping container quotation" novalidate>
+            <input type="hidden" name="csrf_token" value="">
+            <!-- Honeypot -->
+            <div style="position: absolute; left: -9999px;" aria-hidden="true">
+              <label for="website">Website</label>
+              <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+            </div>
+
+            <div class="form-group">
+              <label for="full_name">Full Name <span class="required">*</span></label>
+              <input type="text" id="full_name" name="full_name" required maxlength="120" autocomplete="name">
+              <div class="form-error"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address <span class="required">*</span></label>
+              <input type="email" id="email" name="email" required maxlength="180" autocomplete="email">
+              <div class="form-error"></div>
+            </div>
+<div class="form-group">
+  <label for="telephone">Telephone Number <span class="required">*</span></label>
+  <input
+    type="tel"
+    id="telephone"
+    name="telephone"
+    required
+    maxlength="30"
+    autocomplete="tel"
+    placeholder="+1 555 123 4567"
+  >
+  <div class="form-error"></div>
+</div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="container_type">Container Type <span class="required">*</span></label>
+                <select id="container_type" name="container_type" required>
+                  <option value="">Select type</option>
+                  <option value="New Shipping Containers">New Shipping Containers</option>
+                  <option value="Container Rental">Container Rental</option>
+                  <option value="Container Modification">Container Modification</option>
+                  <option value="Used Shipping Containers">Used Shipping Containers</option>
+                  <option value="Refrigerated Containers">Refrigerated Containers</option>
+                  <option value="Modified Shipping Containers">Modified Shipping Containers</option>
+                  <option value="Flat-Rack Containers">Flat-Rack Containers</option>
+                  <option value="Open-Top Containers">Open-Top Containers</option>
+                  <option value="Other / Mixed">Other / Mixed</option>
+                </select>
+                <div class="form-error"></div>
+              </div>
+
+              <div class="form-group">
+                <label for="preferred_size">Preferred Size</label>
+                <select id="preferred_size" name="preferred_size">
+                  <option value="">Select size (optional)</option>
+                  <option value="20 ft">20 ft</option>
+                  <option value="40 ft">40 ft</option>
+                  <option value="40 ft High Cube">40 ft High Cube</option>
+                  <option value="45 ft High Cube">45 ft High Cube (limited availability)</option>
+                  <option value="Other / Not sure">Other / Not sure</option>
+                </select>
+                <div class="form-error"></div>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="quantity">Quantity Required <span class="required">*</span></label>
+                <input type="number" id="quantity" name="quantity" min="1" max="9999" step="1" required>
+                <div class="form-error"></div>
+              </div>
+
+              <div class="form-group">
+                <label for="condition">Condition Preference</label>
+                <select id="condition" name="condition">
+                  <option value="">Select preference</option>
+                  <option value="New">New</option>
+                  <option value="Used">Used</option>
+                  <option value="Either">Either</option>
+                </select>
+                <div class="form-error"></div>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="delivery_city">Delivery City <span class="required">*</span></label>
+                <input type="text" id="delivery_city" name="delivery_city" required maxlength="100" autocomplete="address-level2">
+                <div class="form-error"></div>
+              </div>
+
+              <div class="form-group">
+                <label for="delivery_country">Delivery Country <span class="required">*</span></label>
+                <input type="text" id="delivery_country" name="delivery_country" required maxlength="100" autocomplete="country-name">
+                <div class="form-error"></div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="timeframe">Preferred Purchasing Timeframe</label>
+              <select id="timeframe" name="timeframe">
+                <option value="">Select timeframe (optional)</option>
+                <option value="As soon as possible">As soon as possible</option>
+                <option value="Within 1 month">Within 1 month</option>
+                <option value="1–3 months">1–3 months</option>
+                <option value="3–6 months">3–6 months</option>
+                <option value="Flexible / Planning stage">Flexible / Planning stage</option>
+              </select>
+              <div class="form-error"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="additional_info">Additional Information</label>
+              <textarea id="additional_info" name="additional_info" rows="4" maxlength="2000" placeholder="Any special requirements, dimensions, intended use, or other details..."></textarea>
+              <div class="form-error"></div>
+            </div>
+
+            <div class="privacy-consent"><input type="checkbox" id="quote-privacy-consent" name="privacy_consent" value="1" required><label for="quote-privacy-consent">I have read the <a href="privacy-policy.html" target="_blank" rel="noopener">Privacy Policy</a> and agree that Ultimate Containers Inc. may use the information I submit to respond to this quotation enquiry. *</label></div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Submit Enquiry</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+<footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-icon"><img src="assets/images/brand/ultimate-containers-logo-wide.jpg" width="1465" height="855" alt="Ultimate Containers Inc. logo"></div>
+            <div class="logo-text">
+              <span class="company-name">Ultimate Containers Inc.</span>
+            </div>
+          </a>
+          <p>Container sales, rentals, modifications and delivery coordination across North America.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="why-choose-us.html">Why Choose Us</a></li>
+            <li><a href="how-we-work.html">How We Work</a></li>
+            <li><a href="faq.html">FAQ</a>
+        <a href="reviews.html">Customer Reviews</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Containers</h4>
+          <ul>
+            <li><a href="containers.html#new">New Containers</a></li>
+            <li><a href="containers.html#used">Used Containers</a></li>
+            <li><a href="containers.html#reefer">Refrigerated</a></li>
+            <li><a href="containers.html#modified">Modified</a></li>
+            <li><a href="containers.html#flatrack">Flat-Rack</a></li>
+            <li><a href="containers.html#opentop">Open-Top</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="contact.html">Request a Quote</a></li>
+            <li><a href="contact.html">Contact Details</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="social-links" aria-label="Official social media links">
+        <a href="https://www.facebook.com/share/1CvEt1oFZ3/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">Facebook</a>
+        
+      </div>
+      <div class="footer-legal" aria-label="Legal information">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
+        <a href="shipping-policy.html">Shipping Policy</a>
+        <a href="returns-cancellation-policy.html">Returns &amp; Cancellation</a>
+      <a href="cookie-policy.html">Cookie Policy</a><a href="#cookie-preferences" data-cookie-open>Cookie Preferences</a></div>
+      <div class="footer-bottom">
+        <span>&copy; <span id="year"></span> Ultimate Containers Inc. All rights reserved.</span>
+        <span>Shipping Container Sales, Rentals & Modifications</span>
+      </div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+
+<div class="cookie-banner" id="cookie-banner" role="region" aria-label="Cookie preferences" hidden>
+  <div class="cookie-banner-copy"><strong>Your privacy choices</strong><p>We use essential storage for secure website functions. Optional analytics are off unless you choose otherwise. No analytics provider is currently enabled.</p><a href="cookie-policy.html">Read our Cookie Policy</a></div>
+  <div class="cookie-banner-actions"><button type="button" class="btn btn-outline" id="cookie-reject">Reject Optional</button><button type="button" class="btn btn-outline" id="cookie-customize">Customize</button><button type="button" class="btn btn-primary" id="cookie-accept">Accept All</button></div>
+</div>
+<div class="cookie-modal" id="cookie-modal" role="dialog" aria-modal="true" aria-labelledby="cookie-modal-title" hidden>
+  <div class="cookie-modal-panel"><button type="button" class="cookie-modal-close" id="cookie-close" aria-label="Close preferences">×</button><h2 id="cookie-modal-title">Cookie preferences</h2><p>Essential storage is always active because it supports secure forms and basic site operation. Optional analytics remain disabled unless you turn them on. No analytics scripts are currently configured.</p>
+    <div class="cookie-choice"><div><strong>Essential</strong><p>Security, session and form functionality.</p></div><input type="checkbox" checked disabled aria-label="Essential cookies always active"></div>
+    <div class="cookie-choice"><div><strong>Optional analytics</strong><p>Would permit aggregate site-usage measurement if an analytics provider is configured in the future.</p></div><input type="checkbox" id="cookie-analytics" aria-label="Allow optional analytics"></div>
+    <div class="cookie-banner-actions"><button type="button" class="btn btn-outline" id="cookie-save-reject">Reject Optional</button><button type="button" class="btn btn-primary" id="cookie-save">Save Choices</button></div>
+  </div>
+</div>
+<script src="js/cookie-consent.js" defer></script>
+<script src='js/analytics-tracking.js' defer></script>
+</body>
+</html>

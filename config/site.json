@@ -1,0 +1,15 @@
+{
+  "site_url": "https://YOUR-DOMAIN.example",
+  "company": "Ultimate Containers Inc.",
+  "established": 2012,
+  "timezone": "America/New_York",
+  "phone": "+13262020106",
+  "whatsapp": "+19715205164",
+  "email": "ultimatecontainersinc@gmail.com",
+  "service_regions": [
+    "United States",
+    "Canada",
+    "Mexico",
+    "select international projects through partner network"
+  ]
+}

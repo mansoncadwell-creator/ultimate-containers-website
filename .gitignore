@@ -1,0 +1,27 @@
+.env
+node_modules/
+data/*.sqlite
+data/*.sqlite3
+data/*.db
+data/*.log
+*.log
+*.bak
+.DS_Store
+
+# Private environment files
+.env*
+!.env.example
+
+# Local databases and customer data
+data/
+
+# Backups and temporary files
+backup-before-analytics/
+*.backup
+*.backup-*
+*.encoding-backup
+
+# Logs
+logs/
+
+.env.example

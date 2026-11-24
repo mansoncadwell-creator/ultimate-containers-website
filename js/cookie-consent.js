@@ -1,0 +1,22 @@
+(() => {
+  'use strict';
+  const KEY = 'uci_cookie_preferences_v1';
+  const banner = document.getElementById('cookie-banner');
+  const modal = document.getElementById('cookie-modal');
+  if (!banner || !modal) return;
+  const analytics = document.getElementById('cookie-analytics');
+  const read = () => { try { const v = JSON.parse(localStorage.getItem(KEY) || 'null'); return v && typeof v.analytics === 'boolean' ? v : null; } catch (_) { return null; } };
+  const save = (allow) => { const value = { essential: true, analytics: !!allow, savedAt: new Date().toISOString(), version: 1 }; try { localStorage.setItem(KEY, JSON.stringify(value)); } catch (_) {} banner.hidden = true; modal.hidden = true; };
+  const open = () => { const v = read(); analytics.checked = !!(v && v.analytics); modal.hidden = false; document.getElementById('cookie-close').focus(); };
+  const close = () => { modal.hidden = true; document.getElementById('cookie-customize').focus(); };
+  if (!read()) banner.hidden = false;
+  document.getElementById('cookie-accept').addEventListener('click', () => save(true));
+  document.getElementById('cookie-reject').addEventListener('click', () => save(false));
+  document.getElementById('cookie-customize').addEventListener('click', open);
+  document.getElementById('cookie-save').addEventListener('click', () => save(analytics.checked));
+  document.getElementById('cookie-save-reject').addEventListener('click', () => save(false));
+  document.getElementById('cookie-close').addEventListener('click', close);
+  modal.addEventListener('click', (e) => { if (e.target === modal) close(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !modal.hidden) close(); });
+  document.querySelectorAll('[data-cookie-open]').forEach((el) => el.addEventListener('click', (e) => { e.preventDefault(); open(); }));
+})();

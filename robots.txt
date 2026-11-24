@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Replace YOUR-DOMAIN.example after configuring the production domain.
+Sitemap: https://YOUR-DOMAIN.example/sitemap.xml
+
+Disallow: /admin/
+Disallow: /data/
