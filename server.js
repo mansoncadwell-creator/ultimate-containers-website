@@ -11,7 +11,7 @@ app.set('trust proxy', 1);
 const PORT=Number(process.env.PORT||3000);
 if(!process.env.SESSION_SECRET || process.env.SESSION_SECRET.length<32){console.error('SESSION_SECRET is missing or shorter than 32 characters. Copy .env.example to .env and set a long random secret.');process.exit(1);}
 app.disable('x-powered-by');
-app.use(helmet({contentSecurityPolicy:{directives:{defaultSrc:["'self'"],styleSrc:["'self'","'unsafe-inline'","https://fonts.googleapis.com"],fontSrc:["'self'","https://fonts.gstatic.com","data:"],imgSrc:["'self'","data:","https:"],scriptSrc:["'self'"],connectSrc:["'self'"],upgradeInsecureRequests:null}}}));
+app.use(helmet({contentSecurityPolicy:{directives:{defaultSrc:["'self'"],styleSrc:["'self'","'unsafe-inline'","https://fonts.googleapis.com"],fontSrc:["'self'","https://fonts.gstatic.com","data:"],imgSrc:["'self'","data:","https:"],scriptSrc:["'self'","https://embed.tawk.to","https://*.tawk.to"],scriptSrcAttr:["'none'"],connectSrc:["'self'","https://*.tawk.to","wss://*.tawk.to"],frameSrc:["'self'","https://*.tawk.to"],upgradeInsecureRequests:null}}}));
 app.use(express.urlencoded({extended:false,limit:'30kb'}));app.use(express.json({limit:'30kb'}));
 fs.mkdirSync(path.join(__dirname,'data'),{recursive:true});
 app.use(session({name:'uci.sid',store:new SQLiteSessionStore(),secret:process.env.SESSION_SECRET,resave:false,saveUninitialized:false,rolling:true,cookie:{httpOnly:true,sameSite:'strict',secure:process.env.NODE_ENV==='production',maxAge:8*60*60*1000}}));
